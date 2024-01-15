@@ -38,13 +38,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const size = document.querySelector("#size");
   size.addEventListener("change", (e) => {
     boxes.forEach((box) => {
-        box.style.height = size.value * 1 + "px"
-        box.style.width = size.value * 1 + "px"
+        box.style.height = size.value * 1 + "px";
+        box.style.width = size.value * 1 + "px";
+    })
+  })
+
+  const color = document.querySelector("#color");
+  color.addEventListener("change", () => {
+    document.documentElement.style.setProperty("--color", color.value)
+  })
+
+  const radius = document.querySelector("#radius");
+  radius.addEventListener("change", () => {
+    boxes.forEach((box) => {
+        box.style.borderRadius = radius.value + "%";
     })
   })
 
 
-
-
-
+  setInterval(() => {
+    clearInterval();
+    clearTimeout();
+  } ,100000)
 });

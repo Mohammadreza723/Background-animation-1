@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --color: #0f0;
+}
+
 .container {
     max-width: 100vw;
     max-height: 100vh;
@@ -34,7 +38,7 @@
         background-color: transparent;
     }
     50% {
-        background-color: #0f0;
+        background-color: var(--color);
     }
     to{
         background-color: transparent;
@@ -56,34 +60,34 @@
     border-radius: 10px 0 0 10px;
     background-color: rgba(0, 0, 0, .9);
     transform: translateX(0px);
+    z-index: 999;
 }
 
-.settings > section > form {
+.settings > section {
     margin: 20px;
     margin-top: 40px;
 }
-.settings > section > form > label > h2 {
-    color: #0f0;
+.settings > section > label > h2 {
+    color: var(--color);
     font-family: sans-serif;
     font-size: 50px;
     font-weight: 100;
+    margin: 10px;
 }
-.settings > section > form > label > input {
+.settings > section > label > input {
     background-color: transparent;
-    color: #0f0;
+    color: var(--color);
     border: none;
     width: 100%;
     height: 30px;
     outline: none;
     position: relative;
 }
-.settings > section > form > label:nth-child(2) > input::before {
-    bottom: 0;
-    left: 0;
-    content: "cndschiuhdc";
-    color: #0f0;
-    width: 100%;
-    background-color: #0f0;
+.settings > section > label:nth-child(2) > input {
+    border-bottom: var(--color) 1px solid;
+    box-shadow: 0 0 10px var(--color) ;
+    border-radius: 10px;
+    padding-left: 20px;
 }
 
 .active_settings {
@@ -106,13 +110,14 @@
     align-items: start;
     justify-content: center;
     cursor: pointer;
+    z-index: -100;
 }
 .settings > .toggle_setting > div {
     transition: 1s;
     margin: 8px 0 8px 20px;
     height: 4px;
     width: 30px;
-    background-color: #0f0;
+    background-color: var(--color);
 }
 
 

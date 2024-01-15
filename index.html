@@ -9,18 +9,20 @@
 <body>
     <div class="container">
     </div>
-    <div class="settings">
+    <div class="settings active_settings">
         <section>
-            <form>
                 <label>
                     <h2>Size</h2>
-                    <input type="range" min="30" max="100" id="size" />
+                    <input type="range" min="30" max="100" value="0" id="size" />
                 </label>
                 <label>
                     <h2>Color</h2>
-                    <input type="text" />
+                    <input type="text" id="color" />
                 </label>
-            </form>
+                <label>
+                    <h2>Radius</h2>
+                    <input type="range" min="0" max="100" value="0" id="radius" />
+                </label>
         </section>
         <div class="toggle_setting">
             <div class="show_menu"></div>
